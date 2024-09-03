@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Code | Kyle Huang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        canvas {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+        }
+
+        #decodedMessage {
+            max-width: 600px; /* Adjust as needed */
+            word-wrap: break-word; /* Ensures long words break to fit */
+            overflow-wrap: break-word; /* Provides additional support for breaking long words */
+            white-space: pre-wrap; /* Maintains white space and wraps text */
+            text-align: center; /* Centers text if needed */
+            word-break: break-word; /* Optional: breaks long words or URLs */
+        }
+    </style>
+</head>
+<body>
+    <h1>Color Code By Kyle Huang</h1>
+    <a href="about.html">How does all of this work?</a><br>
+    <input type="text" id="messageInput" placeholder="Enter your message (letters only)">
+    <button onclick="encodeMessage()">Encode Message</button>
+    <button onclick="decodeMessage()">Decode Image</button>
+    <button onclick="downloadImage()">Download Image</button>
+    <button onclick="copyImage()">Copy Image</button>
+    <button onclick="document.getElementById('imageUpload').click()">Upload Image</button>
+    <input type="file" id="imageUpload" accept="image/png" style="display:none" onchange="loadImage()">
+    <canvas id="canvas"></canvas>
+    <p id="decodedMessage"></p>
+    <script src="app.js"></script>
+</body>
+</html>
