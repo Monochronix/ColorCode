@@ -39,7 +39,6 @@ let originalImageWidth = 0;
 let originalImageHeight = 0;
 let scalingFactor = 1; // Default scaling factor
 
-// Handle image upload and scaling
 function loadImage() {
     const fileInput = document.getElementById('imageUpload');
     const file = fileInput.files[0];
@@ -50,20 +49,19 @@ function loadImage() {
             const canvas = document.getElementById('canvas');
             const ctx = canvas.getContext('2d');
             
-            originalImageWidth = img.width;
-            originalImageHeight = img.height;
+            // Set canvas size to the image's original size
+            canvas.width = img.width;
+            canvas.height = img.height;
             
-            // Determine the scaling factor
-            scalingFactor = img.width < 25 ? 20 / img.width : 10 / img.width; // Adjust as needed
-            
-            // Set canvas size and draw the image
-            canvas.width = img.width * scalingFactor;
-            canvas.height = img.height * scalingFactor;
-            ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvas.width, canvas.height);
+            // Draw the image onto the canvas
+            ctx.drawImage(img, 0, 0);
             
             // Store image data for download and copy operations
             const dataURL = canvas.toDataURL();
             document.getElementById('downloadCanvas').value = dataURL;
+            
+            // Adjust canvas size to fit the screen without scaling
+            fitCanvasToScreen();
         };
         
         const reader = new FileReader();
@@ -73,6 +71,8 @@ function loadImage() {
         reader.readAsDataURL(file);
     }
 }
+
+
 
 function decodeMessage() {
     const canvas = document.getElementById('canvas');
