@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;   
+}
+
+h1 {
+    font-size: 2.6em;
+    font-family: "Oswald", sans-serif;
+}
+
+
+input {
+    width: 30%;
+    border-radius: 10px;
+    border: 1.5px solid #000;
+    background-color: #FFFFFF;
+    box-shadow: 2.5px 3px 0 #000;
+    transition: all 0.2s ease;
+    outline: none;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+}
+
+input:focus {
+    box-shadow: 5.5px 7px 0 black;
+}
+
+input::placeholder {
+    font-family: "Roboto", sans-serif;
+    color: #4a4a4a;
+    font-weight: 600;
+}
+button {
+    padding: 17px 40px;
+    border-radius: 10px;
+    border: 1.5px solid #000;
+    background-color: #FFFFFF;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: #000 0px 10px 0px 0px;
+    color: #000;
+    cursor: pointer;   
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+button:hover {
+    font-size: 19px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    border: 1.5px solid #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    box-shadow: 4.5px 5px 0 #000;
+}
+canvas {
+    margin-top: 20px;
+    border: 1.5px solid #000;
+    border-radius: 5px;
+    box-shadow: 4.5px 5px 0 #000;
+    margin-bottom: 50px;
+}
+
+#decodedMessage {
+    max-width: 600px; 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap; 
+    text-align: center; 
+    word-break: break-word; 
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+}
+
+#decodedContainer {
+    border: 1.5px solid black;
+    border-radius: 5px;
+    padding: 0 20px 0 20px;
+    box-shadow: 4.5px 5px 0 #000;
+}
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
