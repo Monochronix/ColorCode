@@ -17,7 +17,14 @@ h1 {
     font-family: "Oswald", sans-serif;
 }
 
+.mediumLink {
+    margin-bottom: 30px;
+}
 
+.material-icons {
+    position: relative;
+    top: 6.5px;
+}
 input {
     width: 30%;
     border-radius: 10px;
